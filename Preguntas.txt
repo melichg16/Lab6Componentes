@@ -1,0 +1,24 @@
+# Lab6Componentes
+Preguntas:
+a. Cuál es la diferencia en la práctica entre @Controller y @RestController?
+La declaración de anotación @Controller se usa para definir un controlador SpringMVC en la clase para procesar la solicitud enviada por el front-end.
+@RestController es @Controller +@ResponseBody por lo que se utiliza cuando los metodos devuelvan su respuesta en formato JSON
+
+b. Cuál es mejor usar en qué casos?
+Si necesito que todos los métodos me devuelvan una cadena JSON se anota la clase con @RestController y cuando en una clase sólo unos métodos devuelven JSON entonces la 
+clase se anota con @Controller y @ResponseBody.
+
+c. Por qué en el findAll no se especifica el URI para la operación?
+Porque esta me trae toda la información entonces no se le debe específicar que información traer en el URL.
+
+d. Qué obtiene si trata de borrar 2 veces un recurso?
+No se obtiene ninguna respuesta, al hacer el GET nada más no aparece el que se eliminó
+e. Comente la anotación de PutMapping del método que hace el update. Reinicie la aplicación.
+Observe que pasa si lo trata de hacer.
+f. Rehabilite la anotación en PutMapping. Pero ahora cambie el URL de POSTMAN para que apunte
+directamente a la colección /contacts. ¿Qué error recibe?
+ "timestamp": "2022-04-09T19:54:41.394+00:00",
+    "status": 405,
+    "error": "Method Not Allowed",
+    "path": "/contacts"
+}
